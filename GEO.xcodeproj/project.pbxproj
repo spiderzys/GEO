@@ -10,9 +10,9 @@
 		695C75571CF69F6700B527D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695C75561CF69F6700B527D7 /* AppDelegate.swift */; };
 		695C75591CF69F6700B527D7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695C75581CF69F6700B527D7 /* ViewController.swift */; };
 		695C755C1CF69F6700B527D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 695C755A1CF69F6700B527D7 /* Main.storyboard */; };
-		695C755F1CF69F6700B527D7 /* GEO.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 695C755D1CF69F6700B527D7 /* GEO.xcdatamodeld */; };
 		695C75611CF69F6700B527D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 695C75601CF69F6700B527D7 /* Assets.xcassets */; };
 		695C75641CF69F6700B527D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 695C75621CF69F6700B527D7 /* LaunchScreen.storyboard */; };
+		695C756C1CF6A80F00B527D7 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 695C756B1CF6A80F00B527D7 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,10 +20,10 @@
 		695C75561CF69F6700B527D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		695C75581CF69F6700B527D7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		695C755B1CF69F6700B527D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		695C755E1CF69F6700B527D7 /* GEO.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GEO.xcdatamodel; sourceTree = "<group>"; };
 		695C75601CF69F6700B527D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		695C75631CF69F6700B527D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		695C75651CF69F6700B527D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		695C756B1CF6A80F00B527D7 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				695C756C1CF6A80F00B527D7 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +41,7 @@
 		695C754A1CF69F6600B527D7 = {
 			isa = PBXGroup;
 			children = (
+				695C756B1CF6A80F00B527D7 /* MapKit.framework */,
 				695C75551CF69F6600B527D7 /* GEO */,
 				695C75541CF69F6600B527D7 /* Products */,
 			);
@@ -62,7 +64,6 @@
 				695C75601CF69F6700B527D7 /* Assets.xcassets */,
 				695C75621CF69F6700B527D7 /* LaunchScreen.storyboard */,
 				695C75651CF69F6700B527D7 /* Info.plist */,
-				695C755D1CF69F6700B527D7 /* GEO.xcdatamodeld */,
 			);
 			path = GEO;
 			sourceTree = "<group>";
@@ -138,7 +139,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				695C755F1CF69F6700B527D7 /* GEO.xcdatamodeld in Sources */,
 				695C75591CF69F6700B527D7 /* ViewController.swift in Sources */,
 				695C75571CF69F6700B527D7 /* AppDelegate.swift in Sources */,
 			);
@@ -294,19 +294,6 @@
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		695C755D1CF69F6700B527D7 /* GEO.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				695C755E1CF69F6700B527D7 /* GEO.xcdatamodel */,
-			);
-			currentVersion = 695C755E1CF69F6700B527D7 /* GEO.xcdatamodel */;
-			path = GEO.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 695C754B1CF69F6600B527D7 /* Project object */;
 }

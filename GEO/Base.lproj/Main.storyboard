@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GEO" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +18,55 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="d4A-WA-T4n">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="52x-9R-IGY"/>
+                                </connections>
+                            </mapView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pin_filled" translatesAutoresizingMaskIntoConstraints="NO" id="Fk9-di-atJ">
+                                <rect key="frame" x="290" y="290" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="NC2-OA-zUl"/>
+                                    <constraint firstAttribute="width" secondItem="Fk9-di-atJ" secondAttribute="height" id="xH9-Ek-wTV"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qln-9L-l6e">
+                                <rect key="frame" x="20" y="559" width="560" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="T6T-FD-dee"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="d4A-WA-T4n" secondAttribute="trailing" constant="-20" id="1Ud-fh-wn7"/>
+                            <constraint firstItem="Fk9-di-atJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9DB-wU-9BO"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Qln-9L-l6e" secondAttribute="bottom" id="FaG-Jn-KPs"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Qln-9L-l6e" secondAttribute="trailing" id="KM1-Mp-eGM"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="d4A-WA-T4n" secondAttribute="bottom" id="LMi-G6-nfs"/>
+                            <constraint firstItem="d4A-WA-T4n" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="M1o-Ra-5h2"/>
+                            <constraint firstItem="Fk9-di-atJ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="SQ0-02-bUf"/>
+                            <constraint firstItem="Qln-9L-l6e" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="sSe-BP-oI2"/>
+                            <constraint firstItem="d4A-WA-T4n" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="zRL-LU-Au6"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="locationLabel" destination="Qln-9L-l6e" id="FkF-LV-oeZ"/>
+                        <outlet property="mapView" destination="d4A-WA-T4n" id="cNB-6C-Vh4"/>
+                        <outlet property="pinImageView" destination="Fk9-di-atJ" id="O5t-bv-qyx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="280" y="399"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="pin_filled" width="25" height="25"/>
+    </resources>
 </document>
